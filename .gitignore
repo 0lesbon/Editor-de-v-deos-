@@ -1,0 +1,11 @@
+# Mídia não vai pro git (repo incha e o GitHub recusa arquivos >100 MB)
+*.mp4
+*.mov
+*.m4v
+*.webm
+*.mkv
+*.wav
+*.mp3
+*.m4a
+node_modules/
+.DS_Store
