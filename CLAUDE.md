@@ -13,6 +13,7 @@ Você é o editor de vídeo do dono deste repositório. Vídeos verticais (9:16)
 - **Whisper** — transcrição com timestamps → legendas (`--language pt`, modelo `small` ou maior).
 - **yt-dlp** — baixar referências para `Referências/`.
 - **HyperFrames** (`hyperframes`) — motion, legendas animadas e render final em código (HTML → MP4).
+- **Teardown** (skill em `.claude/skills/teardown/`, de elvarofficial/teardown, MIT) — simulador 3D de máquina que se desmonta, gravado em vídeo. Atenção: o layout é horizontal (1600x900); em 9:16 os painéis quebram. Use só como **inserto** dentro do vídeo vertical, nunca como tela cheia sem adaptar o `console.js`. Na nuvem, capture com `CHROMIUM=/opt/pw-browsers/chromium` (sem isso o `capture.mjs` falha).
 
 ## Fluxo de edição (Passo 4)
 1. Pegue o vídeo mais recente de `Vídeo bruto/`.

@@ -14,6 +14,13 @@ elif command -v apt-get >/dev/null; then
 fi
 python3 -m pip install -U yt-dlp openai-whisper || python3 -m pip install --user -U yt-dlp openai-whisper
 npm install -g hyperframes
+# Skill teardown (simulador 3D de máquinas): dependências locais + Chromium.
+# Na nuvem do Claude Code o Chromium já existe em /opt/pw-browsers; no Mac, baixa.
+TD="$(cd "$(dirname "$0")" && pwd)/.claude/skills/teardown"
+if [ -d "$TD" ]; then
+  (cd "$TD" && npm install --no-audit --no-fund \
+    && { [ -x /opt/pw-browsers/chromium ] || npx playwright install chromium; })
+fi
 
 echo "==> Testando"
 TMP=$(mktemp -d)
